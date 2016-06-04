@@ -1,0 +1,115 @@
+@impo可rt 'compass';
+//@import 'screen';
+@import 'base/fonts';
+@import 'base/style';
+@import 'base/media';
+//@import 'base/css3-mixins';
+
+video {
+	.wrapper & {
+		display: block;
+		width: 100vw;
+		height: 100vh;
+	}
+	.modal & {
+		width: 100%;
+	}
+}
+
+.u-fit--cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.js-polyfill-fit--cover {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.index-container {
+	position: relative;
+	.title-group {
+		position: absolute;
+		width: 100%;
+	}
+	h2, h3, h4, .CTA-group {
+		position: relative;
+		z-index: 999;
+		width: 100%;
+		text-align: center;
+	}
+	h2 {
+		top: 110px;
+	}
+	h3 {
+		top: 80px;
+	}
+	h4 {
+		color: $more-dark-gray;
+		top: 80px;
+		text-shadow: 0 0 10px rgba($white,.9);
+		font-size: 1.68em;
+	}
+	.CTA-group {
+		top: 80px;
+		.btn-lg {
+			width: 400px;
+		}
+		.CTA-small-group {
+			margin: 20px auto;
+		}
+		i img {
+			width: 28px;
+			padding-left: 4px;
+			margin-top: -4px;
+		}
+	}
+	
+	@include respond-to (only-device){
+		h2 {
+			top: 60px;
+			img {
+				width: 86%;
+			} 
+		}
+		h3 {
+			top: 30px;
+			img {
+				width: 90%;
+			}
+		}
+		h4 {
+			font-size: 1.15em;
+			top: 20px;
+			span {
+				display: block;
+			}
+		}
+		.CTA-group {
+			top: 20px;
+			.btn-lg {
+				width: 90%;
+			}
+			.CTA-small-group {
+				width: 90%;
+			}
+		}
+		.btn-md {
+			padding: 12px 0;
+			width: 48%;
+			margin: 0 .7%;
+		}
+	}
+	@include respond-to (normal-mobile){
+		.btn-md {
+			font-size: 14px;
+		}
+	}
+}

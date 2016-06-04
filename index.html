@@ -20,6 +20,7 @@
 	<!--css-->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/global.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
 	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
@@ -33,7 +34,7 @@
 </head>
 <body id="index" data-spy="scroll" data-target="#side-nav">
 	<!--Navigation-->
-		<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="mask"></div>
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -63,33 +64,51 @@
 		</nav>
 	<div class="wrapper">
 		<div class="index-container">
-			<h2><img src="images/transformen_logo_v.svg" alt="Transformen"></h2>
+			<div class="title-group">
+				<h2><img src="images/transformen_logo_v.svg" alt="Transformen"></h2>
+				<h3><img src="images/main-title.png" alt="為你設計的購衣新模式"></h3>
+				<h4>
+					<span>60分鐘，</span>
+					<span>讓你一輩子都不用再煩惱買衣服這件事</span>
+				</h4>
+				<div class="CTA-group">
+					<button type="button" class="btn btn-primary btn-lg" onClick="location.href='order_step1.html'">馬上預約<i class="fa fa-calendar-check-o" aria-hidden="true"></i></button>
+
+					<div class="CTA-small-group">
+						<button type="button" class="btn btn-info btn-md icon-play" data-toggle="modal" data-target="#video">45秒流程解說<i><img src="images/icon_play.png" alt=""></i></button>
+						<button type="button" class="btn btn-info btn-md icon-play"  onClick="window.open('https://www.messenger.com/t/drhbeauty/')">FB私訊給你問<i><img src="images/icon_messenger.png" alt=""></i></button>
+					</div>
+					<a class="links" href="faq.html">常見問答</a>
+				</div>
+			</div>
 		</div>
 		<div class="mask"></div>
 		
-		
-		
+		<!--video bg-->
 		<video poster="" autoplay="autoplay" loop="loop" class="u-fit--cover">
 		  <source src="video/TransforMEN_index_video.mp4" type="video/mp4"/>
 		</video>
+		
+		<div id="Footer">
+			<a href="#">隱私權政策</a>
+<!--				Copyright @ All Rights Reserved.-->
+		</div>
 	</div>
-	
-	
-	
-	
-	
-    
-	<!-- wrapper -->
-<!--
-	<div id="wrapper" style="height: 2000px;">
-	
+
+	<!-- video -->
+	<div id="video" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<button type="button" class="close hairline" data-dismiss="modal"></button>
+				<div class="modal-body">
+					<video poster="" autoplay="autoplay" loop="loop" class="u-fit--cover">
+					<source src="video/TransforMEN_index_video.mp4" type="video/mp4"/>
+					</video>
+				</div>
+			</div>
+		</div>
 	</div>
--->
-	<div id="Footer">
-		<footer>
-			Copyright @ All Rights Reserved.
-		</footer>
-	</div>	
 	
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
