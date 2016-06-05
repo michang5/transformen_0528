@@ -52,7 +52,7 @@
 						<li><a href="about_html">關於我們</a></li>
 						<li><a href="faq.html">常見問答</a></li>
 						<li><a href="contact.html">聯絡我們</a></li>
-						<li><a href="how_to_use.html">使用流程</a></li>
+						<li><a data-toggle="modal" data-target="#video">使用流程</a></li>
 						<li class="visible-xs-block"><a href="#">FACEBOOK粉絲頁</a></li>
 						<li class="hidden-xs"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 					</ul>
@@ -86,25 +86,50 @@
 		
 		<!--video bg-->
 		<video poster="" autoplay="autoplay" loop="loop" class="u-fit--cover">
-		  <source src="video/TransforMEN_index_video.mp4" type="video/mp4"/>
+			<source src="video/TransforMEN_index_video.mp4" type="video/mp4"/>
 		</video>
 		
 		<div id="Footer">
 			<a href="#">隱私權政策</a>
-<!--				Copyright @ All Rights Reserved.-->
 		</div>
 	</div>
 
 	<!-- video -->
 	<div id="video" class="modal fade" role="dialog">
+		<button type="button" class="close hairline" data-dismiss="modal"></button>
 		<div class="modal-dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
-				<button type="button" class="close hairline" data-dismiss="modal"></button>
 				<div class="modal-body">
 					<video poster="" autoplay="autoplay" loop="loop" class="u-fit--cover">
-					<source src="video/TransforMEN_index_video.mp4" type="video/mp4"/>
+						<source src="video/TransforMEN_index_video.mp4" type="video/mp4"/>
 					</video>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- prompt -->
+	<div class="modal sleepy-overlay" role="dialog">
+		<div class="modal-dialog sleepy-modal">
+			<!-- Modal content-->
+			<div class="modal-content sleepy-content">
+				<button type="button" class="close hairline" data-dismiss="modal"></button>
+				<div class="modal-body">
+					<h4 class="text-center">
+						<span>
+							Transformen 提供的是，全新的線上線下男性購衣模式
+						</span>
+						<span>
+							讓你不用逛街，不用學穿搭，也可以在最短時間內穿到最適合你的衣服
+						</span>
+					</h4>
+					<video poster="" autoplay="autoplay" loop="loop" class="u-fit--cover">
+						<source src="video/TransforMEN_index_video.mp4" type="video/mp4"/>
+					</video>
+					<span class="gold text-center">更多男性購物新創意，請關注</span>
+					<button type="button" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook-official" aria-hidden="true"></i>Transformen 粉絲專頁</button>
+					
 				</div>
 			</div>
 		</div>

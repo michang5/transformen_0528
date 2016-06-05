@@ -13,6 +13,7 @@ body {
   word-break: normal;
   line-height: 1.85;
   background: #f2f3f4;
+  color: #4f5d69;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,6 +50,21 @@ p {
   font-family: "source-han-sans-traditional", sans-serif;
 }
 
+p > span, h3 > span, h4 > span {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+p > span > span, h3 > span > span, h4 > span > span {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 320px) {
+  p > span > span, h3 > span > span, h4 > span > span {
+    display: block;
+  }
+}
+
 a {
   color: #ad8e32;
   -moz-transition: color, 0.5s, ease-in;
@@ -58,6 +74,7 @@ a {
 }
 a:hover, a:focus {
   text-decoration: none;
+  color: #6c540c;
 }
 a.links {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 10px rgba(255, 255, 255, 0.9);
@@ -66,6 +83,19 @@ a.links {
 }
 a.links:hover {
   color: #6c540c;
+}
+
+hr {
+  border-top: 1px dashed #c5c5c5;
+  height: 1px;
+  margin: 30px auto;
+  clear: both;
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  hr {
+    width: 96%;
+  }
 }
 
 .clearfix {
@@ -86,6 +116,10 @@ ul, li {
   list-style: none;
 }
 
+.btn {
+  margin: 14px auto;
+}
+
 .btn:focus, .btn:active:focus, .btn.active:focus,
 .btn.focus, .btn:active.focus, .btn.active.focus {
   outline: none;
@@ -103,6 +137,15 @@ ul, li {
   background: #ad8e32;
   border: 1px solid #ad8e32;
 }
+.btn-primary.disabled {
+  color: beige;
+  background: #d9bd69;
+  border: 1px solid #d9bd69;
+}
+.btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary.disabled[disabled], .btn-primary.disabled[disabled]:hover, .btn-primary.disabled[disabled]:focus, .btn-primary.disabled[disabled].focus, .btn-primary.disabled[disabled]:active, .btn-primary.disabled[disabled].active {
+  background: #d9bd69;
+  border: 1px solid #d9bd69;
+}
 
 .btn-lg, .btn-group-lg > .btn {
   border-radius: 2px;
@@ -113,6 +156,12 @@ ul, li {
 }
 .btn-lg i, .btn-group-lg > .btn i {
   margin-left: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .btn-lg, .btn-group-lg > .btn {
+    letter-spacing: 0;
+    font-size: 20px;
+  }
 }
 
 .btn-info {
@@ -144,6 +193,17 @@ ul, li {
   padding: 12px 25px;
   font-size: 18px;
   margin: 0 5px;
+}
+
+.form-group {
+  margin: 14px auto;
+}
+.form-group input[type="text"], .form-group input[type="tel"], .form-group input[type="email"] {
+  line-height: 50px;
+  height: 50px;
+  font-size: 1.25em;
+  letter-spacing: .06em;
+  margin: 14px auto;
 }
 
 .navbar-default {
@@ -243,7 +303,7 @@ h2.logo-v img {
   color: #fff;
   line-height: 35px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .navbar-default .navbar-nav > li:nth-last-of-type(1) {
     background: #ad8e32;
   }
@@ -338,6 +398,7 @@ h2.logo-v img {
 }
 
 .modal {
+  overflow-y: auto;
   background-color: transparent;
   background-color: rgba(255, 255, 255, 0.9);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6FFFFFF,endColorstr=#E6FFFFFF);
@@ -345,14 +406,28 @@ h2.logo-v img {
 }
 .modal#video .modal-dialog {
   width: 100%;
+  margin: 50% 0;
 }
 .modal#video .modal-dialog .modal-body {
   padding: 0;
 }
+.modal#video .modal-dialog .modal-content {
+  line-height: 0;
+}
+.modal .modal-dialog {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 769px) {
+  .modal .modal-dialog {
+    width: 80%;
+  }
+}
 .modal .modal-content {
   box-shadow: none;
   border: 0;
-  line-height: 0;
+}
+.modal .modal-content .modal-body {
+  padding: 60px 20px 20px;
 }
 
 .close {
@@ -430,4 +505,68 @@ h2.logo-v img {
 #Footer a {
   color: #4f5d69;
   text-decoration: underline;
+}
+
+.note {
+  font-size: 1.25em;
+  text-shadow: 0 0 10px #f2f3f4, 0 0 10px #f2f3f4, 0 0 20px #f2f3f4;
+}
+.note a {
+  text-decoration: underline;
+}
+p .note {
+  font-size: 1em;
+}
+p .note b {
+  color: #ad8e32;
+}
+
+.white-block {
+  padding: 20px;
+  background: #fff;
+  border: 1px dashed #c5c5c5;
+}
+.white-block p {
+  margin-bottom: 0;
+}
+
+.gold {
+  color: #ad8e32;
+}
+
+h3.gold {
+  font-size: 30px;
+}
+@media only screen and (max-width: 768px) {
+  h3.gold {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+}
+
+h2 img {
+  margin: 0 auto;
+}
+h2.inline-img {
+  text-align: center;
+  line-height: 1.2;
+}
+h2.inline-img img.inline {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+span.gold {
+  margin-top: 20px;
+  display: block;
+}
+
+span ~ .btn {
+  margin-top: 4px;
+}
+
+i.fa-facebook-official {
+  margin-right: 6px;
 }

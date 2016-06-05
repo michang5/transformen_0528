@@ -14,11 +14,11 @@ body, html {
 }
 body {
 	font-family: 'Roboto', "source-han-sans-traditional", sans-serif, 'arial', "微軟正黑體", "Microsoft JhengHei";
-//	font-size: 100%;
 	word-wrap: break-word;
 	word-break: normal;
 	line-height: 1.85;
 	background: $light-gray;
+	color: $dark-gray;
 }
 //h-style
 h1, h2, h3, h4, h5, h6 {
@@ -45,11 +45,33 @@ p {
 	font-weight: 200;
 	font-family: "source-han-sans-traditional", sans-serif;
 }
+p, h3, h4 {
+	>span {
+		display: block;
+		margin: 0;
+		padding: 0;
+		
+	}
+	>span > span {
+		margin: 0;
+		padding: 0;
+	}
+	@include respond-to (normal-mobile){
+		
+	}
+	@include respond-to (xxs-mobile){
+		> span > span {
+			display: block;
+			
+		}
+	}
+}
 a {
 	color: $gold;
 	@include transition(color, .5s, ease-in);
 	&:hover, &:focus { 
 		text-decoration: none;
+		color: $dark-gold;
 	}
 	&.links {
 		text-shadow: 0 0 10px rgba($white,.9), 0 0 10px rgba($white,.9);
@@ -60,7 +82,16 @@ a {
 		}
 	}
 }
-
+hr {
+	border-top: 1px dashed $gray;
+	height: 1px;
+	margin: 30px auto;
+	clear: both;
+	width: 50%;
+	@include respond-to (only-device){
+		width: 96%;
+	}
+}
 .clearfix {
 	@include clearfix;
 }
@@ -69,6 +100,9 @@ ul, li {
 	padding: 0;
 	-webkit-padding-start: 0;
 	list-style: none;
+}
+.btn {
+	margin: 14px auto;
 }
 .btn:focus,.btn:active:focus,.btn.active:focus,
 .btn.focus,.btn:active.focus,.btn.active.focus {
@@ -87,6 +121,16 @@ ul, li {
 			border: 1px solid $gold;
 		}
 	}
+	&.disabled {
+		color: beige;
+		background: $light-gold;
+		border: 1px solid $light-gold;
+		&:hover, &:focus, &.focus, &:active, &.active, &[disabled], &[disabled]:hover, &[disabled]:focus, &[disabled].focus, &[disabled]:active, &[disabled].active {
+//			color: beige;
+			background: $light-gold;
+			border: 1px solid $light-gold;	
+		}
+	}
 }
 .btn-lg, .btn-group-lg > .btn {
 	border-radius: 2px;
@@ -98,7 +142,8 @@ ul, li {
 		margin-left: 10px;
 	}
 	@include respond-to (only-device){
-		
+		letter-spacing: 0;
+		font-size: 20px;
 	}
 }
 .btn-info {
@@ -123,6 +168,18 @@ ul, li {
 	font-size: 18px;
 	margin: 0 5px;
 }
+//input
+.form-group {
+	margin: 14px auto;
+	input[type="text"],input[type="tel"],input[type="email"] {
+		line-height: 50px;
+		height: 50px;
+		font-size: $xl-font;
+		letter-spacing: .06em;
+		margin: 14px auto;
+	}
+}
+
 //element
 .navbar-default {
 	padding-top: 22px;
@@ -205,7 +262,7 @@ h2 {
 					color: $white;
 					line-height: 35px;
 				}
-				@include respond-to (only-device){
+				@media only screen and (max-width: 767px) {
 					background: $gold;
 				}
 			}
@@ -306,21 +363,37 @@ h2 {
 		height: 100%;
 		z-index: 9;
 		background: image-url('dot.png');
-		
 	}
 }
 .modal {
+	overflow-y: auto;
 	@include transparent($white,.9);
 	&#video .modal-dialog {
 		width: 100%;
+		margin: 50% 0;
 		.modal-body {
 			padding: 0;
+		}
+		.modal-content {
+			line-height: 0;
+			
+		}
+	}
+	.modal-dialog {
+		margin: 0 auto;
+	}
+	@include respond-to (only-desktop){
+		.modal-dialog {
+			width: 80%;
 		}
 	}
 	.modal-content {
 		box-shadow: none;
 		border: 0;
-		line-height: 0;
+		
+		.modal-body {
+			padding: 60px 20px 20px;
+		}
 	}
 }
 .close {
@@ -392,4 +465,65 @@ h2 {
 		color: $dark-gray;
 		text-decoration: underline;
 	}
+}
+//style
+.note {
+	font-size: $xl-font;
+	text-shadow: 0 0 10px $light-gray, 0 0 10px $light-gray, 0 0 20px $light-gray;
+	a {
+		text-decoration: underline; 	
+	}
+	p & {
+		font-size: $m-font;
+		b {
+			color: $gold;
+		}
+	}
+}
+.white-block {
+	padding: 20px;
+	background: $white;
+	border: 1px dashed $gray;
+	p {
+		margin-bottom: 0;
+	}
+}
+.gold {
+	color: $gold;
+}
+h3 {
+	&.gold {
+		font-size: 30px;
+		@include respond-to (only-device){
+			font-size: 20px;
+			line-height: 1.25;
+		}
+	}
+}
+h2 {
+	img {
+		margin: 0 auto;
+	}
+	&.inline-img {
+		text-align: center;
+		line-height: 1.2;
+		img.inline {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			max-width: 100%;
+		}
+	}	
+}
+span {
+	&.gold {
+		margin-top: 20px;
+		display: block;
+	}
+}
+span ~ .btn {
+	margin-top: 4px;
+}
+i.fa-facebook-official {
+	margin-right: 6px;
 }

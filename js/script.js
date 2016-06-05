@@ -9,6 +9,37 @@ $(function() {
 //		e.preventDefault();
 //		$('.navbar-default').addClass('gray-shadow')
 //	});
+	$(".btn-close").click(function () {
+			$(".modal").hide();
+		idleTime = 0;
+	});
+	
+	var idleTime = 0;
+
+		$(document).ready(function () {
+			var idleInterval = setInterval(timerIncrement, 20000);
+			$(this).mousemove(function (e) {
+				idleTime = 0;
+			});
+			$(this).keypress(function (e) {
+				idleTime = 0;
+			});
+		    $(".close").click(function () {
+		        $(".sleepy-overlay").hide();
+		        idleTime = 0;
+		    });
+			$('.sleepy-modal').click(function (event) {
+				event.stopPropagation();
+			});
+		});
+
+		function timerIncrement() {
+			idleTime = idleTime + 1;
+			if (idleTime > 1) {
+				$('.sleepy-overlay').fadeIn('slow');
+				idleTime = 0;
+			}
+		}
 	
 });
 
@@ -41,3 +72,5 @@ let videoCover = selector => {
 }
 
 videoCover('.u-fit--cover')
+
+

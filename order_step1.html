@@ -32,7 +32,7 @@
 	
 	<!--GA-->
 </head>
-<body data-spy="scroll" data-target="#side-nav">
+<body id="step1" data-spy="scroll" data-target="#side-nav">
 	<!--Navigation-->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="mask"></div>
@@ -51,7 +51,7 @@
 					<li><a href="about_html">關於我們</a></li>
 					<li><a href="faq.html">常見問答</a></li>
 					<li><a href="contact.html">聯絡我們</a></li>
-					<li><a href="how_to_use.html">使用流程</a></li>
+					<li><a data-toggle="modal" data-target="#video">使用流程</a></li>
 					<li class="visible-xs-block"><a href="#">FACEBOOK粉絲頁</a></li>
 					<li class="hidden-xs"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 				</ul>
@@ -64,7 +64,7 @@
 	<div class="wrapper">
 		<div class="header-container container">
 			<div class="title-group">
-				<h1><img src="images/step1_title.png" alt="挑選帥的時間點" class="img-responsive"></h1>
+				<h1><img src="images/step1_title.png" alt="挑選帥的時間點 選擇時段" title="挑選帥的時間點 選擇時段" class="img-responsive"></h1>
 				<div class="process">
 					<ul>
 						<li><span>1</span><span>選擇時段</span></li>
@@ -75,11 +75,11 @@
 				
 			</div>
 		</div>
-		<div class="container">
+		<div class="container pages step1">
 			<div class="title-img clearfix">
 				<h3><span>哪一天來找人家</span></h3>
 				<div class="woman right">
-					<img src="images/woman1.png" alt="">
+					<img src="images/woman1.png" alt="男性穿搭造型顧問">
 				</div>
 			</div>
 			<div class="calendar-wrapper">
@@ -146,33 +146,93 @@
 			<div class="title-img clearfix">
 				<h3><span>想約幾點啦</span></h3>
 				<div class="woman left">
-					<img src="images/woman2.png" alt="">
+					<img src="images/woman2.png" alt="男性穿搭造型顧問">
 				</div>
 			</div>
-			<div class="container time">
+			<div class="container radio-wrapper">
 				<label>
-					<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>13:00~14:30</label>
-				<label class="disabled">
-					<input type="radio" name="radios" value="" disabled><span class="outside"><span class="inside"></span></span>14:30~16:00</label>
-				<label>
-					<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>16:00~17:30</label>
-				<label>
-					<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>18:30~20:00</label>
-				<label class="disabled">
-					<input type="radio" name="radios" value="" disabled>
-					<span class="outside"><span class="inside"></span></span>20:00~21:30
+					<div>
+						<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>
+						<span class="time">13:00~14:30</span>
+					</div>
 				</label>
+				<label class="disabled">
+					<div>
+						<input type="radio" name="radios" value="" disabled><span class="outside"><span class="inside"></span></span>
+						<span class="time">14:30~16:00</span>
+					</div>
+				</label>
+				<label>
+					<div>
+						<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>
+						<span class="time">16:00~17:30</span>
+					</div>
+				</label>
+				<label>
+					<div>
+						<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>
+						<span class="time">18:30~20:00</span>
+					</div>
+				</label>
+				<label class="disabled">
+					<div>
+						<input type="radio" name="radios" value="" disabled>
+						<span class="outside"><span class="inside"></span></span>
+						<span class="time">20:00~21:30</span>
+					</div>
+				</label>
+				<button type="button" class="btn btn-primary btn-lg btn-block" onClick="location.href='order_step2.html'">下一步</button>
 			</div>
-
+			
 		</div>
 		<div id="Footer" class="clearfix">
 			<footer>
 				<a href="#">隱私權政策</a>
-<!--				Copyright @ All Rights Reserved.-->
 			</footer>
 		</div>
 	</div>
 
+	<!-- prompt -->
+	<div class="modal sleepy-overlay" role="dialog">
+		<div class="modal-dialog sleepy-modal">
+			<!-- Modal content-->
+			<div class="modal-content sleepy-content">
+				<button type="button" class="close hairline" data-dismiss="modal"></button>
+				<div class="modal-body">
+					<h2 class="text-center"><img src="images/step1_prompt_title.png" alt="預約時段都不理想？" title="預約時段都不理想？" class="img-responsive"></h2>
+					<h3 class="text-center gold">
+						<span>10分鐘極速諮詢量身，</span>
+						<span>直接幫你試穿！</span>
+					</h3>
+					<div class="white-block title-img">
+						<h4 class="text-center">
+							<span>02-7777-7777</span>
+							<span>來電相約免擠人</span>
+						</h4>
+						<div class="woman right-out">
+							<img src="images/woman4.png" alt="男性穿搭造型顧問">
+						</div>
+						<button type="button" class="btn btn-primary btn-lg btn-block btn-close" onClick="">繼續預約</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- video -->
+	<div id="video" class="modal fade" role="dialog">
+		<button type="button" class="close hairline" data-dismiss="modal"></button>
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+					<video poster="" autoplay="autoplay" loop="loop" class="u-fit--cover">
+						<source src="video/TransforMEN_index_video.mp4" type="video/mp4"/>
+					</video>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<!--jQuery--> 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
@@ -180,8 +240,5 @@
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-	<script>
-		
-	</script>
 </body>
 </html>
