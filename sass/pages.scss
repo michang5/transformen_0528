@@ -30,6 +30,10 @@ h2, h3, h4 {
 			background: image-url('bg_accs5.jpg') 101% bottom no-repeat;
 			padding-bottom: 300px;
 		}
+		&.about {
+			background: image-url('bg_accs6.jpg') left bottom no-repeat;
+			padding-bottom: 300px;
+		}
 		@include respond-to (only-device){
 			padding-bottom: 160px;
 			&.step1 {
@@ -68,6 +72,10 @@ h2, h3, h4 {
 		@include respond-to (xxs-mobile){
 			&.login {
 				padding-bottom: 200px;
+			}
+			&.about {
+				padding-bottom: 220px;
+				background-size: 90%;
 			}
 		}
 	}
@@ -486,5 +494,10 @@ h2, h3, h4 {
 				}
 			}
 		}
+	}
+}
+.about {
+	img {
+		margin: 20px auto;
 	}
 }

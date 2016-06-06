@@ -617,6 +617,11 @@ h2.inline-img img.inline {
   padding: 0;
   max-width: 100%;
 }
+@media only screen and (max-width: 480px) {
+  h2.gold {
+    font-size: 1.65em;
+  }
+}
 
 span.gold {
   margin-top: 20px;

@@ -26,6 +26,10 @@ h2, h3, h4 {
   background: url('../images/bg_accs5.jpg?1465213361') 101% bottom no-repeat;
   padding-bottom: 300px;
 }
+.container.pages.about {
+  background: url('../images/bg_accs6.jpg?1465228646') left bottom no-repeat;
+  padding-bottom: 300px;
+}
 @media only screen and (max-width: 768px) {
   .container.pages {
     padding-bottom: 160px;
@@ -64,6 +68,10 @@ h2, h3, h4 {
 @media only screen and (max-width: 320px) {
   .container.pages.login {
     padding-bottom: 200px;
+  }
+  .container.pages.about {
+    padding-bottom: 220px;
+    background-size: 90%;
   }
 }
 
@@ -448,4 +456,8 @@ h2, h3, h4 {
   .order-list li span:nth-of-type(1) {
     margin-right: 0;
   }
+}
+
+.about img {
+  margin: 20px auto;
 }

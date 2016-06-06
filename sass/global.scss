@@ -569,7 +569,12 @@ h2 {
 			padding: 0;
 			max-width: 100%;
 		}
-	}	
+	}
+	&.gold {
+		@include respond-to (normal-mobile){
+			font-size: 1.65em;
+		}
+	}
 }
 span {
 	&.gold {
