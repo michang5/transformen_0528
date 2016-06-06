@@ -32,7 +32,7 @@
 	
 	<!--GA-->
 </head>
-<body id="step3" data-spy="scroll" data-target="#side-nav">
+<body id="profile" data-spy="scroll" data-target="#side-nav">
 	<!--Navigation-->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="mask"></div>
@@ -64,77 +64,125 @@
 	</nav>
 	<div class="wrapper">
 		<div class="header-container container">
-			<div class="title-group">
-				<h1><img src="images/step3_title.png" alt="選擇帥的的時間點 登入 註冊" title="選擇帥的的時間點 登入 註冊" class="img-responsive"></h1>
-				<div class="process">
-					<ul>
-						<li><span>1</span><span>選擇時段</span></li>
-						<li><span>2</span><span>登入 / 註冊</span></li>
-						<li><span>3</span><span>預約確認</span></li>
-					</ul>
-				</div>
-				
-			</div>
+			<h1><img src="images/profile_title.png" alt="你的基本資料" title="你的基本資料" class="img-responsive"></h1>
 		</div>
-		<div class="container pages step3">
+		<div class="container pages profile">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<div class="white-block title-img">
-						<p><span>
-							預約時間：
-								<span>2016/5/2 週一，2:30pm</span>
-							</span>
-							<span>
-								店面地址：
-								<span>xxxx xxx xxxx xxxxxxxx</span>
-							</span>
-						</p>
-						<div class="woman left-out">
-							<img src="images/woman3.png" alt="男性穿搭造型顧問">
-						</div>
-					</div>
-					<p>
-						<span class="note">貼心提醒：為了不讓形象顧問把你加進黑名單，如要取消預約，記得儘早來電 02-7777-7777 告知喔！或前往會員資料頁，點選 <b>取消預約</b> 按鈕</span>
-					</p>
+				<div class="col-sm-6">
 					<div class="form-group">
 						<input type="text" class="form-control" id="name" value="楊東岳">
 						<input type="email" class="form-control" id="email" value="zac@mz.run">
 						<input type="tel" class="form-control" id="mobile" value="0912345678">
+						<input type="text" class="form-control" id="nickname" placeholder="暱稱" value="">
 					</div>
-					<button type="button" class="btn btn-primary btn-lg btn-block">儲存</button>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						
+						<input type="text" class="form-control" id="height" placeholder="身高" value="">
+						<input type="text" class="form-control" id="weight" placeholder="體重" value="">
+						<input type="text" class="form-control" id="address" placeholder="完整地址" value="">
+						<div class="form-inline">
+							<label>生日</label>
+							
+							<input type="text" class="form-control" id="address" placeholder="西元年" value="">
+							<select class="form-control" id="month">
+								<option>月份</option>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>
+							<select class="form-control" id="date">
+								<option>日期</option>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 text-center">
+					<button type="button" class="btn btn-primary btn-lg" onClick="location.href='order_step1.html'">修改會員資料</button>
 				</div>
 			</div>
-			<hr>
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<h2 class="inline-img">
-						<img src="images/step3_subtitle_01.png" alt="Transformen 即將推出網購服務" title="Transformen 即將推出網購服務" class="inline">
-						<img src="images/step3_subtitle_02.png" alt="Transformen 即將推出網購服務" title="Transformen 即將推出網購服務" class="inline">
-					</h2>
-					<h3 class="gold text-center">你希望多看到哪一類商品？</h3>
-					<div class="radio-wrapper accs">
-						<label>
-							<div>
-								<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>
-								<span class="time">選項一選項一選項一</span>
-							</div>
-						</label>
-						<label>
-							<div>
-								<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>
-								<span class="time">選項二選項二</span>
-							</div>
-						</label>
-						<label>
-							<div>
-								<input type="radio" name="radios" value=""><span class="outside"><span class="inside"></span></span>
-								<span class="time">選項三選項三</span>
-							</div>
-						</label>
+				<h2 class="text-center maintitle"><img src="images/profile_title_2.png" alt="你的基本資料" title="你的基本資料" class="img-responsive"></h2>
+				<div class="col-md-6 col-md-offset-3">
+					<div class="white-block title-img">
+						<p><span>
+							諮詢時間：
+								<span>2016/05/02 週一，2:30pm</span>
+							</span>
+							<span>
+								造型顧問：小美
+							</span>
+						</p>
+						<div class="woman right-out">
+							<img src="images/woman5.png" alt="男性穿搭造型顧問">
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-					<button type="button" class="btn btn-primary btn-lg btn-block">送出</button>
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-md-6">
+						<ul class="body-info">
+							<li>肩寬：cm</li>
+							<li>胸圍：cm</li>
+							<li>腰圍：cm</li>
+							<li>中腰圍：cm</li>
+							<li>手長：cm</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul class="body-info">
+							<li>腿長：cm</li>
+							<li>鞋號：</li>
+							<li>上衣尺寸：</li>
+							<li>褲子尺寸：</li>
+							<li>穿著目的：</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h2 class="text-center maintitle"><img src="images/profile_title_3.png" alt="預約記錄" title="預約記錄" class="img-responsive"></h2>
+				<div class="col-md-8 col-md-offset-2">
+					<ul class="order-list">
+						<li>
+							<span>2016 / 06 / 29 / 13:00~14:30</span> 
+							<span><button type="button" class="btn btn-primary btn-sm">取消</button></span>
+						</li>
+						<li>
+							<span>2016 / 06 / 18 / 13:00~14:30</span> 
+							<span><button type="button" class="btn btn-primary btn-sm">取消</button></span>
+						</li>
+						<li class="pass-order">
+							<span>2016 / 05 / 23 / 13:00~14:30</span> 
+						</li>
+						<li class="pass-order">
+							<span>2016 / 05 / 12 / 13:00~14:30</span> 
+						</li>
+						<li class="pass-order">
+							<span>2016 / 05 / 11 / 13:00~14:30</span> 
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -144,7 +192,9 @@
 			</footer>
 		</div>
 	</div>
-	
+
+
+
 	<!-- video -->
 	<div id="video" class="modal fade" role="dialog">
 		<button type="button" class="close hairline" data-dismiss="modal"></button>
@@ -166,8 +216,5 @@
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-	<script>
-		
-	</script>
 </body>
 </html>

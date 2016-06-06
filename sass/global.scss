@@ -168,15 +168,66 @@ ul, li {
 	font-size: 18px;
 	margin: 0 5px;
 }
+.btn-sm {
+	border-radius: 4px;
+	padding: 8px 16px;
+	font-size: 16px;
+	margin: 0 5px;
+	@include respond-to (normal-mobile){
+		font-size: 14px;
+		padding: 4px 8px;
+	}
+}
 //input
 .form-group {
 	margin: 14px auto;
-	input[type="text"],input[type="tel"],input[type="email"] {
+	input[type="text"],input[type="tel"],input[type="email"], input[type="date"] {
 		line-height: 50px;
 		height: 50px;
 		font-size: $xl-font;
 		letter-spacing: .06em;
 		margin: 14px auto;
+	}
+}
+.form-inline {
+	padding: 0;
+	margin: 0;
+	label {
+		font-size: $xl-font;
+		margin-right: 1%;
+	}
+	select {
+		line-height: 40px;
+		height: 50px;
+		padding: 10px;
+		font-size: $xl-font;
+		margin-left: 1%;
+		color: #999;
+	}
+	option:not(:checked) {
+		color:#000;
+	}
+	input.form-control {
+		margin: 0;
+	}
+	.form-control {
+		width: 28%;
+		display: inline-block!important
+	}
+	@include respond-to (md-screen){
+		.form-control {
+			width: 27%;
+			display: inline-block!important
+		}
+	}
+	@include respond-to (normal-mobile){
+		.form-control {
+			width: 26%;
+			display: inline-block!important
+		}
+		select {
+			font-size: $l-font;
+		}
 	}
 }
 
@@ -370,7 +421,7 @@ h2 {
 	@include transparent($white,.9);
 	&#video .modal-dialog {
 		width: 100%;
-		margin: 50% 0;
+		margin: 0;
 		.modal-body {
 			padding: 0;
 		}
@@ -385,6 +436,11 @@ h2 {
 	@include respond-to (only-desktop){
 		.modal-dialog {
 			width: 80%;
+		}
+	}
+	@include respond-to (only-device){
+		&#video .modal-dialog {
+			margin: 30% 0;
 		}
 	}
 	.modal-content {
@@ -455,7 +511,7 @@ h2 {
 	height: 35px;
 	line-height: 35px;
 	text-align: center;
-	margin-top: 80px;
+	margin-top: 50px;
 	#index & {
 		margin-top: -30px;
 		z-index: 999;
@@ -526,4 +582,8 @@ span ~ .btn {
 }
 i.fa-facebook-official {
 	margin-right: 6px;
+}
+.maintitle {
+	margin-top: 70px;
+	clear: both;
 }

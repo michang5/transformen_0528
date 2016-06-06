@@ -18,6 +18,14 @@ h2, h3, h4 {
 .container.pages.step3 {
   background: url('../images/bg_accs3.jpg?1465102386') right bottom no-repeat;
 }
+.container.pages.login {
+  background: url('../images/bg_accs4.jpg?1465183873') 15% bottom no-repeat;
+  padding-bottom: 300px;
+}
+.container.pages.profile {
+  background: url('../images/bg_accs5.jpg?1465213361') 101% bottom no-repeat;
+  padding-bottom: 300px;
+}
 @media only screen and (max-width: 768px) {
   .container.pages {
     padding-bottom: 160px;
@@ -33,6 +41,29 @@ h2, h3, h4 {
   .container.pages.step3 {
     background-position: 135% 100%;
     background-size: 60%;
+  }
+  .container.pages.login {
+    background-position: left bottom;
+    background-size: 40%;
+  }
+  .container.pages.profile {
+    background-position: 101% 97%;
+    background-size: 60%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container.pages.login {
+    background-position: -5% bottom;
+    background-size: 52%;
+    padding-bottom: 280px;
+  }
+  .container.pages.profile {
+    background-size: 60%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .container.pages.login {
+    padding-bottom: 200px;
   }
 }
 
@@ -270,7 +301,6 @@ h2, h3, h4 {
 }
 .radio-wrapper {
   font-size: 2em;
-  width: 60%;
   margin: 0 auto;
   text-align: center;
 }
@@ -375,5 +405,47 @@ h2, h3, h4 {
 @media only screen and (max-width: 768px) {
   .step3 .white-block {
     padding-left: 70px;
+  }
+}
+
+.body-info li, .order-list li {
+  font-size: 1.25em;
+  line-height: 80px;
+  border-bottom: 1px solid #c5c5c5;
+}
+.body-info li:before, .order-list li:before {
+  font-family: FontAwesome;
+  content: "\f058";
+  padding-right: 4px;
+}
+
+.order-list li {
+  padding: 0 10px;
+  font-size: 28px;
+}
+.order-list li span:nth-of-type(1) {
+  margin-right: 20px;
+}
+.order-list li span:nth-of-type(2) {
+  float: right;
+}
+.order-list li:before {
+  content: "\f044";
+}
+.order-list li.pass-order {
+  color: #c5c5c5;
+}
+@media only screen and (max-width: 768px) {
+  .order-list li {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .order-list li {
+    padding: 0;
+    font-size: 16px;
+  }
+  .order-list li span:nth-of-type(1) {
+    margin-right: 0;
   }
 }

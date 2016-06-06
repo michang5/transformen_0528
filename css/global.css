@@ -195,15 +195,70 @@ ul, li {
   margin: 0 5px;
 }
 
+.btn-sm {
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin: 0 5px;
+}
+@media only screen and (max-width: 480px) {
+  .btn-sm {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
+
 .form-group {
   margin: 14px auto;
 }
-.form-group input[type="text"], .form-group input[type="tel"], .form-group input[type="email"] {
+.form-group input[type="text"], .form-group input[type="tel"], .form-group input[type="email"], .form-group input[type="date"] {
   line-height: 50px;
   height: 50px;
   font-size: 1.25em;
   letter-spacing: .06em;
   margin: 14px auto;
+}
+
+.form-inline {
+  padding: 0;
+  margin: 0;
+}
+.form-inline label {
+  font-size: 1.25em;
+  margin-right: 1%;
+}
+.form-inline select {
+  line-height: 40px;
+  height: 50px;
+  padding: 10px;
+  font-size: 1.25em;
+  margin-left: 1%;
+  color: #999;
+}
+.form-inline option:not(:checked) {
+  color: #000;
+}
+.form-inline input.form-control {
+  margin: 0;
+}
+.form-inline .form-control {
+  width: 28%;
+  display: inline-block !important;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .form-inline .form-control {
+    width: 27%;
+    display: inline-block !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .form-inline .form-control {
+    width: 26%;
+    display: inline-block !important;
+  }
+  .form-inline select {
+    font-size: 1.125em;
+  }
 }
 
 .navbar-default {
@@ -406,7 +461,7 @@ h2.logo-v img {
 }
 .modal#video .modal-dialog {
   width: 100%;
-  margin: 50% 0;
+  margin: 0;
 }
 .modal#video .modal-dialog .modal-body {
   padding: 0;
@@ -420,6 +475,11 @@ h2.logo-v img {
 @media only screen and (min-width: 769px) {
   .modal .modal-dialog {
     width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modal#video .modal-dialog {
+    margin: 30% 0;
   }
 }
 .modal .modal-content {
@@ -495,7 +555,7 @@ h2.logo-v img {
   height: 35px;
   line-height: 35px;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 #index #Footer {
   margin-top: -30px;
@@ -569,4 +629,9 @@ span ~ .btn {
 
 i.fa-facebook-official {
   margin-right: 6px;
+}
+
+.maintitle {
+  margin-top: 70px;
+  clear: both;
 }

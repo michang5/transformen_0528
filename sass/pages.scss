@@ -22,10 +22,16 @@ h2, h3, h4 {
 		&.step3 {
 			background: image-url('bg_accs3.jpg') right bottom no-repeat;
 		}
+		&.login {
+			background: image-url('bg_accs4.jpg') 15% bottom no-repeat;
+			padding-bottom: 300px;
+		}
+		&.profile {
+			background: image-url('bg_accs5.jpg') 101% bottom no-repeat;
+			padding-bottom: 300px;
+		}
 		@include respond-to (only-device){
 			padding-bottom: 160px;
-			&.step1,&.step2  {
-			}
 			&.step1 {
 				background-position: 135% bottom;
 				background-size: 60%;
@@ -37,6 +43,31 @@ h2, h3, h4 {
 			&.step3 {
 				background-position: 135% 100%;
 				background-size: 60%;
+			}
+			&.login {
+				background-position: left bottom;
+				background-size: 40%;
+				
+			}
+			&.profile {
+				background-position: 101% 97%;
+				background-size: 60%;
+			}
+		}
+		@include respond-to (normal-mobile){
+			&.login {
+				background-position: -5% bottom;
+				background-size: 52%;
+				padding-bottom: 280px;
+			}
+			&.profile {
+//				padding-bottom: 320px;
+				background-size: 60%;
+			}
+		}
+		@include respond-to (xxs-mobile){
+			&.login {
+				padding-bottom: 200px;
 			}
 		}
 	}
@@ -291,7 +322,7 @@ h2, h3, h4 {
 }
 .radio-wrapper {
 	font-size: $xxxxl-font;
-	width: 60%;
+//	width: 60%;
 	margin: 0 auto;
 	text-align: center;
 	&.spread {
@@ -405,6 +436,55 @@ h2, h3, h4 {
 		padding-left: 50px;
 		@include respond-to (only-device){
 			padding-left: 70px;
+		}
+	}
+}
+//profile
+.body-info, .order-list {
+	li {
+		font-size: $xl-font;
+		line-height: 80px;
+		border-bottom: 1px solid $gray;
+		&:before {
+			font-family: FontAwesome;
+			content: "\f058";
+			padding-right: 4px;
+		}
+	}
+}
+.order-list {
+	li {
+		padding: 0 10px;
+		font-size: 28px;
+		span {
+			&:nth-of-type(1) {
+				margin-right: 20px;
+			}
+			&:nth-of-type(2) {
+				float: right;
+			}
+		}
+		&:before {
+			content: "\f044";
+		}
+		&.pass-order {
+			color: $gray;
+		}
+	}
+	@include respond-to (only-device){
+		li {
+			font-size: 22px;
+		}
+	}
+	@include respond-to (normal-mobile){
+		li {
+			padding: 0;
+			font-size: 16px;
+			span {
+				&:nth-of-type(1) {
+					margin-right: 0;
+				}
+			}
 		}
 	}
 }
