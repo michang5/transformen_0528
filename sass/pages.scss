@@ -34,6 +34,13 @@ h2, h3, h4 {
 			background: image-url('bg_accs6.jpg') left bottom no-repeat;
 			padding-bottom: 300px;
 		}
+		&.contact {
+			background: image-url('bg_accs7.jpg') left bottom no-repeat;
+		}
+		&.faq {
+			background: image-url('bg_accs8.jpg') right bottom no-repeat;
+			padding-bottom: 100px;
+		}
 		@include respond-to (only-device){
 			padding-bottom: 160px;
 			&.step1 {
@@ -56,6 +63,9 @@ h2, h3, h4 {
 			&.profile {
 				background-position: 101% 97%;
 				background-size: 60%;
+			}
+			&.contact {
+				background-size: 80%;
 			}
 		}
 		@include respond-to (normal-mobile){

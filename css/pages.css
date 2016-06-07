@@ -30,6 +30,13 @@ h2, h3, h4 {
   background: url('../images/bg_accs6.jpg?1465228646') left bottom no-repeat;
   padding-bottom: 300px;
 }
+.container.pages.contact {
+  background: url('../images/bg_accs7.jpg?1465295835') left bottom no-repeat;
+}
+.container.pages.faq {
+  background: url('../images/bg_accs8.jpg?1465309464') right bottom no-repeat;
+  padding-bottom: 100px;
+}
 @media only screen and (max-width: 768px) {
   .container.pages {
     padding-bottom: 160px;
@@ -53,6 +60,9 @@ h2, h3, h4 {
   .container.pages.profile {
     background-position: 101% 97%;
     background-size: 60%;
+  }
+  .container.pages.contact {
+    background-size: 80%;
   }
 }
 @media only screen and (max-width: 480px) {
