@@ -278,6 +278,21 @@ ul, li {
 .navbar-default .navbar-collapse {
   border: 0;
 }
+@media only screen and (min-width: 1200px) {
+  .navbar-default .navbar-collapse {
+    position: absolute;
+    right: 0;
+    z-index: 999;
+  }
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
 
 h2.logo-h, h2.logo-v {
   margin: 0;
@@ -295,11 +310,8 @@ h2.logo-h img {
   width: 220px;
 }
 h2.logo-v {
+  display: inline-block;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 h2.logo-v img {
   width: 226px;

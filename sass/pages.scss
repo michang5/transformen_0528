@@ -506,8 +506,49 @@ h2, h3, h4 {
 		}
 	}
 }
+//about
 .about {
 	img {
 		margin: 20px auto;
+	}
+}
+//faq
+.faq-list {
+	h3 {
+		color: $gold;
+		&:before {
+			font-family: FontAwesome;
+			content: "\f059";
+			padding-right: 4px;
+		}
+	}
+	.qus-item, .ans-item {
+		
+		padding: 10px 0;
+	}
+	.qus-item {
+		font-size: 20px;
+		border-bottom: 1px dashed $gray;
+		color: $more-dark-gray;
+	}
+	.ans-item {
+		color: $dark-gray;
+		font-size: $l-font;
+		margin-bottom: 40px;
+		border-bottom: 1px solid #ccc;
+		color: $dark-gray;
+	}
+}
+.panel {
+	background: transparent;
+	border: none;
+}
+.panel-default  {
+	> .panel-heading {
+		background: none;
+		border-bottom: 1px dashed $gray;
+		h4.panel-title {
+			font-size: $xxl-font;
+		}
 	}
 }

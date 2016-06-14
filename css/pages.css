@@ -471,3 +471,40 @@ h2, h3, h4 {
 .about img {
   margin: 20px auto;
 }
+
+.faq-list h3 {
+  color: #ad8e32;
+}
+.faq-list h3:before {
+  font-family: FontAwesome;
+  content: "\f059";
+  padding-right: 4px;
+}
+.faq-list .qus-item, .faq-list .ans-item {
+  padding: 10px 0;
+}
+.faq-list .qus-item {
+  font-size: 20px;
+  border-bottom: 1px dashed #c5c5c5;
+  color: #2b343c;
+}
+.faq-list .ans-item {
+  color: #4f5d69;
+  font-size: 1.125em;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  color: #4f5d69;
+}
+
+.panel {
+  background: transparent;
+  border: none;
+}
+
+.panel-default > .panel-heading {
+  background: none;
+  border-bottom: 1px dashed #c5c5c5;
+}
+.panel-default > .panel-heading h4.panel-title {
+  font-size: 1.5em;
+}
