@@ -681,3 +681,65 @@ i.fa-facebook-official {
   width: 100%;
   height: 100%;
 }
+
+.loader {
+  width: 354px;
+}
+.loader .loader-img {
+  width: 354px;
+  height: 170px;
+  position: relative;
+}
+.loader .loader-img img {
+  position: absolute;
+}
+.loader .loader-img img.rotate {
+  bottom: 1px;
+  right: 2px;
+}
+.loader p span {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  color: #4f5d69;
+  border-bottom: 2px solid #e7ce81;
+}
+.loader .rotate {
+  position: absolute;
+  -webkit-animation: star 5s infinite linear;
+  animation: star 5s infinite linear;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  70% {
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes star {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  70% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
