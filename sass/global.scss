@@ -193,7 +193,7 @@ ul, li {
 		height: 50px;
 		font-size: $xl-font;
 		letter-spacing: .06em;
-		margin: 14px auto;
+//		margin: 14px auto;
 	}
 }
 .form-inline {
@@ -237,7 +237,9 @@ ul, li {
 		}
 	}
 }
-
+.validation {
+	color: $red;
+}
 //element
 .navbar-default {
 	padding-top: 22px;

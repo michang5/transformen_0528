@@ -227,7 +227,6 @@ ul, li {
   height: 50px;
   font-size: 1.25em;
   letter-spacing: .06em;
-  margin: 14px auto;
 }
 
 .form-inline {
@@ -270,6 +269,10 @@ ul, li {
   .form-inline select {
     font-size: 1.125em;
   }
+}
+
+.validation {
+  color: #d34f42;
 }
 
 .navbar-default {

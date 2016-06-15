@@ -73,18 +73,29 @@
 				<div class="col-sm-6">
 					<div class="form-group">
 						<input type="text" class="form-control" id="name" value="楊東岳">
+					</div>
+					<div class="form-group">	
 						<input type="email" class="form-control" id="email" value="zac@mz.run">
+					</div>
+					<div class="form-group">
 						<input type="tel" class="form-control" id="mobile" value="0912345678">
+					</div>
+					<div class="form-group">	
 						<input type="text" class="form-control" id="nickname" placeholder="暱稱" value="">
 					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="form-group">
-						
-						<input type="text" class="form-control" id="height" placeholder="身高" value="">
-						<input type="text" class="form-control" id="weight" placeholder="體重" value="">
-						<input type="text" class="form-control" id="address" placeholder="完整地址" value="">
-						<div class="form-inline">
+					<div class="form-group has-error">
+						<input type="text" class="form-control" id="height" placeholder="身高" value="" id="inputWarning">
+						<span class="validation">*validation style</span>
+					</div>	
+					<div class="form-group">	
+						<input type="text" class="form-control" id="weight" placeholder="體重" value="" id="inputWarning">
+					</div>
+					<div class="form-group">	
+						<input type="text" class="form-control" id="address" placeholder="完整地址" value="" id="inputWarning">
+					</div>
+					<div class="form-inline">
 							<label>生日</label>
 							
 							<input type="text" class="form-control" id="address" placeholder="西元年" value="">
@@ -119,7 +130,7 @@
 								<option>12</option>
 							</select>
 						</div>
-					</div>
+					
 				</div>
 				<div class="col-sm-12 text-center">
 					<button type="button" class="btn btn-primary btn-lg" onClick="location.href='order_step1.html'">修改會員資料</button>
