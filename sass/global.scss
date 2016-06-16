@@ -243,6 +243,7 @@ ul, li {
 //element
 .navbar-default {
 	padding-top: 22px;
+	height: 94px;
 	.navbar-collapse {
 		border: 0;
 		@include respond-to (xlg-screen){

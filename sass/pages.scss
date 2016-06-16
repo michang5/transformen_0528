@@ -36,6 +36,7 @@ h2, h3, h4 {
 		}
 		&.contact {
 			background: image-url('bg_accs7.jpg') left bottom no-repeat;
+			padding-bottom: 350px;
 		}
 		&.faq {
 			background: image-url('bg_accs8.jpg') right bottom no-repeat;
@@ -550,5 +551,10 @@ h2, h3, h4 {
 		h4.panel-title {
 			font-size: $xxl-font;
 		}
+	}
+}
+#contact {
+	.col-sm-4 {
+		padding: 14px 7px;
 	}
 }
