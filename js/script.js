@@ -17,7 +17,7 @@ $(function() {
 	var idleTime = 0;
 
 		$(document).ready(function () {
-			var idleInterval = setInterval(timerIncrement, 1000);
+			var idleInterval = setInterval(timerIncrement, 20000);
 			$(this).mousemove(function (e) {
 				idleTime = 0;
 			});

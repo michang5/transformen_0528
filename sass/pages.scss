@@ -9,39 +9,110 @@ h2, h3, h4 {
 }
 .wrapper {
 	margin-top: 100px;
+	&.step1 {
+		background: image-url('bg_accs1.jpg') right bottom no-repeat;
+	}
+	&.step2 {
+		background: image-url('bg_accs2.jpg') left bottom no-repeat;
+	}
+	&.step3 {
+		background: image-url('bg_accs3.jpg') right bottom no-repeat;
+	}
+	&.login {
+		background: image-url('bg_accs4.jpg') 15% bottom no-repeat;
+	}
+	&.profile {
+		background: image-url('bg_accs5.jpg') 101% bottom no-repeat;
+	}
+	&.about {
+		background: image-url('bg_accs6.jpg') left bottom no-repeat;
+	}
+	&.contact {
+		background: image-url('bg_accs7.jpg') left bottom no-repeat;
+		padding-bottom: 350px;
+	}
+	&.faq {
+		background: image-url('bg_accs8.jpg') right bottom no-repeat;
+		padding-bottom: 100px;
+	}
+	@include respond-to (only-device){
+		padding-bottom: 160px;
+		&.step1 {
+			background-position: 135% bottom;
+			background-size: 60%;
+		}
+		&.step2 {
+			background-position: -55% bottom;
+			background-size: 60%;
+		}
+		&.step3 {
+			background-position: 135% 100%;
+			background-size: 60%;
+		}
+		&.login {
+			background-position: left bottom;
+			background-size: 40%;	
+		}
+		&.profile {
+			background-position: 101% 97%;
+			background-size: 60%;
+		}
+		&.contact {
+			background-size: 80%;
+		}
+	}
+	@include respond-to (normal-mobile){
+		&.login {
+			background-position: -5% bottom;
+			background-size: 52%;
+			padding-bottom: 280px;
+		}
+		&.profile {
+			background-size: 60%;
+		}
+	}
+	@include respond-to (xxs-mobile){
+		&.login {
+			padding-bottom: 200px;
+		}
+		&.about {
+			padding-bottom: 220px;
+			background-size: 90%;
+		}
+	}
 }
 .container {
 	&.pages {
-		padding-bottom: 200px;
-		&.step1 {
-			background: image-url('bg_accs1.jpg') right bottom no-repeat;
-		}
-		&.step2 {
-			background: image-url('bg_accs2.jpg') left bottom no-repeat;
-		}
-		&.step3 {
-			background: image-url('bg_accs3.jpg') right bottom no-repeat;
-		}
-		&.login {
-			background: image-url('bg_accs4.jpg') 15% bottom no-repeat;
-			padding-bottom: 300px;
-		}
-		&.profile {
-			background: image-url('bg_accs5.jpg') 101% bottom no-repeat;
-			padding-bottom: 300px;
-		}
-		&.about {
-			background: image-url('bg_accs6.jpg') left bottom no-repeat;
-			padding-bottom: 300px;
-		}
-		&.contact {
-			background: image-url('bg_accs7.jpg') left bottom no-repeat;
-			padding-bottom: 350px;
-		}
-		&.faq {
-			background: image-url('bg_accs8.jpg') right bottom no-repeat;
-			padding-bottom: 100px;
-		}
+//		padding-bottom: 200px;
+//		&.step1 {
+//			background: image-url('bg_accs1.jpg') right bottom no-repeat;
+//		}
+//		&.step2 {
+//			background: image-url('bg_accs2.jpg') left bottom no-repeat;
+//		}
+//		&.step3 {
+//			background: image-url('bg_accs3.jpg') right bottom no-repeat;
+//		}
+//		&.login {
+//			background: image-url('bg_accs4.jpg') 15% bottom no-repeat;
+//			padding-bottom: 300px;
+//		}
+//		&.profile {
+//			background: image-url('bg_accs5.jpg') 101% bottom no-repeat;
+//			padding-bottom: 300px;
+//		}
+//		&.about {
+//			background: image-url('bg_accs6.jpg') left bottom no-repeat;
+//			padding-bottom: 300px;
+//		}
+//		&.contact {
+//			background: image-url('bg_accs7.jpg') left bottom no-repeat;
+//			padding-bottom: 350px;
+//		}
+//		&.faq {
+//			background: image-url('bg_accs8.jpg') right bottom no-repeat;
+//			padding-bottom: 100px;
+//		}
 		@include respond-to (only-device){
 			padding-bottom: 160px;
 			&.step1 {
